@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve the eletricity app api
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/root/electricity-tracker/api
+Environment="PATH=/root/electricity-tracker/api/apivenv/bin"
+ExecStart=/root/electricity-tracker/api/apivenv/bin/gunicorn --workers 3 --bind unix:/var/www/api.sock -m 007 wsgi:application
+
+[Install]
+WantedBy=multi-user.target

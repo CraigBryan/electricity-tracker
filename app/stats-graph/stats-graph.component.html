@@ -1,0 +1,12 @@
+<div>
+  <div style="display: block;">
+    <canvas baseChart
+      [datasets]="graphData.data"
+      [labels]="graphData.labels"
+      [options]="graphConfig.options"
+      [colors]="graphConfig.colors"
+      [legend]="graphConfig.hasLegend"
+      chartType="line">
+    </canvas>
+  </div>
+</div>

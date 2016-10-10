@@ -1,0 +1,13 @@
+.big-number-container > .label {
+    font-size: 1.2em;
+    padding-left: 1em;
+}
+
+.big-number {
+    font-size: 5em;
+}
+
+.day-control-container {
+    margin: auto;
+    padding-top: 2.5em;
+}

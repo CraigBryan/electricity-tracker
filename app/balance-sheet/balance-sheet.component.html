@@ -1,0 +1,23 @@
+<md-card class="last">
+  <h2>Current Balance: {{dataPoints[dataPoints.length - 1].balance | currency:currType:true}}</h2>
+  <label>
+    Recent Readings
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let header of headers">{{header}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr et-dataPoint
+          *ngFor="let dataPoint of dataPoints"
+          [dataPoint]="dataPoint">
+        </tr>
+      </tbody>
+    </table>
+  </label>
+  <md-card-actions>
+    <button md-raised-button>Add Reading</button>
+    <button md-raised-button>Add TopUp</button>
+  </md-card-actions>
+</md-card>

@@ -1,0 +1,9 @@
+# Installed or generated
+node_modules/*
+typings/*
+*.js
+*.js.map
+*.pyc
+
+# Exclusion to file caught by generated files
+!systemjs.config.js
